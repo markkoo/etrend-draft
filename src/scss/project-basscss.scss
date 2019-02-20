@@ -1,0 +1,32 @@
+@import '../module/stooges-variables';
+@import '../module/stooges-mixin';
+@import './project-mixin';
+@import './project-variables';
+
+::selection {
+    background: $color-main;
+    color: #000;
+}
+
+[class*='flaticon-']:before{
+    display: inline-block;
+font-family: "Flaticon";
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+line-height: 1;
+text-decoration: inherit;
+text-rendering: optimizeLegibility;
+text-transform: none;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;
+}
+
+
+.flaticon-menu:before { content: "\f100"; }
+.flaticon-cancel:before { content: "\f101"; }
+.flaticon-error:before { content: "\f102"; }
+.flaticon-eye-close-up:before { content: "\f103"; }
+
+

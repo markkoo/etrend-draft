@@ -1,0 +1,41 @@
+::-moz-selection {
+  background: #8CC63E;
+  color: #000;
+}
+
+::selection {
+  background: #8CC63E;
+  color: #000;
+}
+
+[class*='flaticon-']:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-menu:before {
+  content: "\f100";
+}
+
+.flaticon-cancel:before {
+  content: "\f101";
+}
+
+.flaticon-error:before {
+  content: "\f102";
+}
+
+.flaticon-eye-close-up:before {
+  content: "\f103";
+}
+/*# sourceMappingURL=project-basscss.css.map */
