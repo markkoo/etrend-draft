@@ -1400,6 +1400,8 @@ footer .powered {
 .productContent {
   padding-left: 320px;
   padding-bottom: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .productContent .productNav {
@@ -1411,19 +1413,34 @@ footer .powered {
   left: 0;
   background: #212121;
   padding-top: 100px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .productContent .productNav .category {
   border-top: 1px solid #4c4c4c;
 }
 
+.productContent .productNav .category.active span {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.productContent .productNav .category.active span:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.productContent .productNav .category.active .link {
+  display: block;
+}
+
 .productContent .productNav .category span {
-  padding: 4px 16px;
+  padding: 6px 16px;
   color: white;
   position: relative;
   display: block;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -1433,12 +1450,7 @@ footer .powered {
   float: right;
 }
 
-.productContent .productNav .category span.active:after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.productContent .productNav .category span.active, .productContent .productNav .category span:hover {
+.productContent .productNav .category span:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1467,7 +1479,43 @@ footer .powered {
   margin-bottom: 16px;
 }
 
+.productContent .productGallery {
+  background: #212121;
+}
+
+.productContent .productGallery .image-scale-63by100 {
+  opacity: 0.5;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.productContent .productGallery .image-scale-63by100:hover {
+  opacity: 1;
+}
+
 .productContent .productGallery .image-scale-63by100:before {
   padding-top: calc(63 / 100 * 100%);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .productContent {
+    padding-left: 242px;
+  }
+  .productContent .productNav {
+    width: 242px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productContent {
+    padding-left: 0;
+  }
+  .productContent .productNav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

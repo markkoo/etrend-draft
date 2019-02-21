@@ -251,38 +251,45 @@ footer{
 }
 
 .productContent{
-    padding-left:$productNavWidthInLg;
+    padding-left:$productNavWidthGtLg;
     padding-bottom: $footerHeight;
+    transition: .3s;
     .productNav{
         position: fixed;
         z-index:1;
-        width:$productNavWidthInLg;
+        width:$productNavWidthGtLg;
         height:calc(100vh - #{$headerHeight} - #{$footerHeight});
         overflow-y: auto;
         left:0;
         background: $color-secondary-1;
         padding-top:100px;
+        transition: .3s;
         .category{
             border-top:1px solid $color-basic-4;
+            &.active{
+                span{
+                    background: rgba(white, 0.1);
+                    &:after{
+                        transform: rotate(90deg)
+                    }
+                }
+                .link{
+                    display: block;
+                }
+            }
             span{
-                padding:4px 16px;
+                padding:6px 16px;
                 color:white;
                 position: relative;
                 display: block;
                 text-transform: uppercase;
-                font-size: 15px;
+                font-size: 13px;
                 cursor: pointer;
                 &:after{
                     content: "\f100";
                     font-family: Flaticon;
                     float: right;
                 }
-                &.active{
-                    &:after{
-                        transform: rotate(90deg)
-                    }
-                }
-                &.active,
                 &:hover{
                     background: rgba(white, 0.1);
                 }
@@ -311,9 +318,32 @@ footer{
         }
     }
     .productGallery{
-        .image-scale-63by100:before {
-            padding-top: calc(63 / 100 * 100%);
+        background: $color-secondary-1;
+        .image-scale-63by100{
+            opacity: 0.5;
+            transition: .3s;
+            &:hover{
+                opacity: 1;
+            }
+            &:before {
+                padding-top: calc(63 / 100 * 100%);
+            }
         }
-    
+    }
+    @media #{$breakpoint-only-md}{
+        padding-left:$productNavWidthLeMd;
+        .productNav{
+            width:$productNavWidthLeMd;
+        }
+    }
+    @media #{$breakpoint-down-sm}{
+        padding-left:0;
+        .productNav{
+            position: relative;
+            width:100%;
+            height:auto;
+            padding-top:16px;
+            padding-bottom:16px;
+        }
     }
 }

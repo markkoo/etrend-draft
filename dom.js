@@ -26,7 +26,6 @@ function animation(duration, action) {
 function slideDown(element) {
     element.style.display = 'block';
     const height = element.clientHeight;
-    console.log(height)
     element.animate({
         height: [0, height + 'px'],
     }, {
@@ -45,7 +44,7 @@ function slideUp(element) {
     });
 
     animate.onfinish = function() {
-        element.style.removeProperty('display');
+        element.style.display = 'none';
     };
 }
 
