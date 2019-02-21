@@ -9,14 +9,14 @@
 
 header{
     position: relative;
-    height:94px;
+    height:$headerHeight;
     z-index:1;
     .areaForFixed{
         position: fixed;
         top:0;
         left:0;
         width: 100%;
-        height:94px;
+        height:$headerHeight;
         padding:0 38px;
         display: flex;
         background: white;
@@ -78,8 +78,15 @@ footer{
     background: black;
     display: flex;
     justify-content: space-between;
+    height: $footerHeight;
     padding: 12px 56px;
     font-size: 13px;
+    &.fixed{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
     .copywrite{
         color:white;
         margin-bottom: 0;
@@ -240,5 +247,73 @@ footer{
                 }
             }
         }
+    }
+}
+
+.productContent{
+    padding-left:$productNavWidthInLg;
+    padding-bottom: $footerHeight;
+    .productNav{
+        position: fixed;
+        z-index:1;
+        width:$productNavWidthInLg;
+        height:calc(100vh - #{$headerHeight} - #{$footerHeight});
+        overflow-y: auto;
+        left:0;
+        background: $color-secondary-1;
+        padding-top:100px;
+        .category{
+            border-top:1px solid $color-basic-4;
+            span{
+                padding:4px 16px;
+                color:white;
+                position: relative;
+                display: block;
+                text-transform: uppercase;
+                font-size: 15px;
+                cursor: pointer;
+                &:after{
+                    content: "\f100";
+                    font-family: Flaticon;
+                    float: right;
+                }
+                &.active{
+                    &:after{
+                        transform: rotate(90deg)
+                    }
+                }
+                &.active,
+                &:hover{
+                    background: rgba(white, 0.1);
+                }
+            }
+            .link{
+                display: none;
+                overflow: hidden;
+                a{
+                    padding:3px 16px 3px 32px;
+                    display: block;
+                    color:$font-color-4;
+                    font-size: 12px;
+                    &.active,
+                    &:hover{
+                        background: rgba(white, 0.1);
+                        color:white;
+                    }
+                    &:nth-of-type(1){
+                        margin-top:8px;
+                    }
+                    &:nth-last-of-type(1){
+                        margin-bottom:16px;
+                    }
+                }
+            }
+        }
+    }
+    .productGallery{
+        .image-scale-63by100:before {
+            padding-top: calc(63 / 100 * 100%);
+        }
+    
     }
 }

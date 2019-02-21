@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>etrend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="areaForFixed">
+            <a href="/index.html" class="logoLink">
+                <img src="/src/images/logo-temp.png" class="image" alt="e'trend logo">
+            </a>
+            <nav>
+                <a href="/products" class="active">products</a>
+                <a href="/brands">brands</a>
+                <a href="/about">about</a>
+                <a href="/contact">contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="productContent">
+        <div class="productNav">
+            <div class="category">
+                <span class="active">Category</span>
+                <div class="link">
+                    <a href="/products/a.html" class="active">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                </div>
+            </div>
+            <div class="category">
+                <span>category</span>
+                <div class="link">
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                </div>
+            </div>
+            <div class="category">
+                <span>category</span>
+                <div class="link">
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                    <a href="/products/a.html">Sanitary Ware</a>
+                </div>
+            </div>
+        </div>
+        <div class="productGallery">
+            <div class="row">
+                <div class="lg-col-4 md-col-4 sm-col-6 col-12">
+                    <div class="image-scale-63by100">
+                        <img src="/src/images/products/1.jpg" class="contain" alt="">
+                    </div>
+                </div>
+                <div class="lg-col-4 md-col-4 sm-col-6 col-12">
+                    <div class="image-scale-63by100">
+                        <img src="/src/images/products/1.jpg" class="contain" alt="">
+                    </div>
+                </div>
+                <div class="lg-col-4 md-col-4 sm-col-6 col-12">
+                    <div class="image-scale-63by100">
+                        <img src="/src/images/products/1.jpg" class="contain" alt="">
+                    </div>
+                </div>
+                <div class="lg-col-4 md-col-4 sm-col-6 col-12">
+                    <div class="image-scale-63by100">
+                        <img src="/src/images/products/1.jpg" class="contain" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="fixed">
+        <p class="copywrite">etrend MARKETING SDN BHD © 2019 All Rights Reserved | <a href="/privacy.html">Privacy</a></p>
+        <p class="powered">Powered By <a href="https://www.stooges.com.my" target="_blank">Stooges</a></p>
+    </footer>
+
+    <script src="/src/web-animations.min.js"></script>
+    <script src="/dom.js"></script>
+    <script>
+        const categoryTab = document.querySelectorAll('.category span').forEach(function(elem){
+            elem.addEventListener('click', function(){
+                slideToggle(elem.nextElementSibling);
+            });
+        });
+        setTimeout(() => {
+            slideDown(document.querySelector('.category span.active').nextElementSibling);
+        }, 500);
+    </script>
+</body>
+</html>

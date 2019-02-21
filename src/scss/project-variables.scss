@@ -1,7 +1,7 @@
 //app 规范
 //1 color
 $color-main:            #8CC63E; //按钮，文字，顶栏...
-$color-secondary-1:     #221E1F;
+$color-secondary-1:     #212121;
 $color-secondary-2:     #6C6E70;
 $color-secondary-3:     #ff0000;
 $color-basic-1:          #f2f5f8; // 背景
@@ -10,10 +10,10 @@ $color-basic-3:          #969696; // 常规图标
 $color-basic-4:          #4c4c4c; // tooltips
 
 //2 font color
-$font-color-1:      #221E1F; // 正文
-$font-color-2:      #8e8e8e; // 次级文字
-$font-color-3:      #bbbbbb; // 提示类文字
-$font-color-4:      #abc0dc; // 提示类可点击文字
+$font-color-1:      #212121; // 正文
+$font-color-2:      #383838; // 次级文字
+$font-color-3:      #6e6e6e; // 提示类文字
+$font-color-4:      #a6a6a6; // 提示类可点击文字
 $font-color-5:      #ffffff; // 顶拦与按钮上的文字
 
 //3 font-family & font-size
@@ -98,3 +98,7 @@ $letter-spacing-p: normal;
 $font-weight-p: 400;
 $margin-p:0 0 1.618em;
 
+//project
+$headerHeight: 94px;
+$footerHeight: 40px;
+$productNavWidthInLg: 320px;

@@ -5,22 +5,22 @@
 }
 
 ::-webkit-input-placeholder {
-  color: #221E1F;
+  color: #212121;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #221E1F;
+  color: #212121;
   opacity: 1;
 }
 
 ::-ms-input-placeholder {
-  color: #221E1F;
+  color: #212121;
   opacity: 1;
 }
 
 ::placeholder {
-  color: #221E1F;
+  color: #212121;
   opacity: 1;
 }
 
@@ -40,7 +40,7 @@ input[type='number'] {
 body {
   font-family: "Didact Gothic", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 16px;
-  color: #221E1F;
+  color: #212121;
   background-color: white;
   min-width: 315px;
   overflow-x: hidden;
@@ -65,7 +65,7 @@ a:hover,
 
 label {
   white-space: nowrap;
-  color: #8e8e8e;
+  color: #383838;
 }
 
 h1,
@@ -73,7 +73,7 @@ h1,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 55px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 75px;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -84,7 +84,7 @@ h2,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 40px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 50px;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -95,7 +95,7 @@ h3,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 28px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 50px;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -106,7 +106,7 @@ h4,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 16px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 1;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -117,7 +117,7 @@ h5,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 9px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 1;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -128,7 +128,7 @@ h6,
   font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-size: 9px;
   font-weight: normal;
-  color: #221E1F;
+  color: #212121;
   line-height: 1;
   letter-spacing: 1;
   margin: 0 0 10px;
@@ -137,7 +137,7 @@ h6,
 p {
   font-family: "Didact Gothic", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
   font-weight: 400;
-  color: #221E1F;
+  color: #212121;
   line-height: normal;
   letter-spacing: normal;
   margin: 0 0 1.618em;
@@ -1122,7 +1122,7 @@ header .areaForFixed nav a {
   font-size: 12px;
   text-transform: uppercase;
   display: inline-block;
-  color: #221E1F;
+  color: #212121;
   border-bottom: 3px solid transparent;
 }
 
@@ -1176,8 +1176,16 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 40px;
   padding: 12px 56px;
   font-size: 13px;
+}
+
+footer.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 footer .copywrite {
@@ -1387,5 +1395,79 @@ footer .powered {
     color: white;
     text-transform: uppercase;
   }
+}
+
+.productContent {
+  padding-left: 320px;
+  padding-bottom: 40px;
+}
+
+.productContent .productNav {
+  position: fixed;
+  z-index: 1;
+  width: 320px;
+  height: calc(100vh - 94px - 40px);
+  overflow-y: auto;
+  left: 0;
+  background: #212121;
+  padding-top: 100px;
+}
+
+.productContent .productNav .category {
+  border-top: 1px solid #4c4c4c;
+}
+
+.productContent .productNav .category span {
+  padding: 4px 16px;
+  color: white;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.productContent .productNav .category span:after {
+  content: "\f100";
+  font-family: Flaticon;
+  float: right;
+}
+
+.productContent .productNav .category span.active:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.productContent .productNav .category span.active, .productContent .productNav .category span:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.productContent .productNav .category .link {
+  display: none;
+  overflow: hidden;
+}
+
+.productContent .productNav .category .link a {
+  padding: 3px 16px 3px 32px;
+  display: block;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+
+.productContent .productNav .category .link a.active, .productContent .productNav .category .link a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.productContent .productNav .category .link a:nth-of-type(1) {
+  margin-top: 8px;
+}
+
+.productContent .productNav .category .link a:nth-last-of-type(1) {
+  margin-bottom: 16px;
+}
+
+.productContent .productGallery .image-scale-63by100:before {
+  padding-top: calc(63 / 100 * 100%);
 }
 /*# sourceMappingURL=style.css.map */
