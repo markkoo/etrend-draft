@@ -1222,6 +1222,7 @@ footer .powered {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 16% 16% 16% 16% 36%;
       grid-template-rows: 16% 16% 16% 16% 36%;
+  background: black;
 }
 
 .homeContent .box {

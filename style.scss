@@ -110,6 +110,7 @@ footer{
     height: 250vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 16% 16% 16% 16% 36%;
+    background: black;
     .box{
         display: flex;
         justify-content: center;
