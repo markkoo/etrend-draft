@@ -310,9 +310,11 @@ footer{
                     }
                 }
                 &:after{
-                    content: "\f100";
+                    content: $font-Flaticon-right-arrow;
                     font-family: Flaticon;
                     float: right;
+                    font-size: 10px;
+                    color:$font-color-4;
                     transition: .3s;
                 }
                 &:hover{
@@ -427,20 +429,21 @@ footer{
         line-height: 1.2;
         padding:0 40px;
         position: relative;
-        &:before,
-        &:after{
-            content: "\f101";
+        &:before{
+            content: $font-Flaticon-left-quote;
             font-family: "Flaticon";
             position: absolute;
             top:0;
             left:0;
+            color:$color-main;
         }
         &:after{
-            content: "\f101";
-            top:auto;
-            left:auto;
+            content: $font-Flaticon-right-quote;
+            font-family: "Flaticon";
+            position: absolute;
             bottom:0;
             right:0;
+            color:$color-main;
         }
     }
     @media #{$breakpoint-only-xs}{
@@ -476,13 +479,13 @@ footer{
                 align-items: center;
                 cursor: pointer;
                 &:before{
-                    content: "\f103";
+                    content: $font-Flaticon-right-arrow;
                     font-family: "Flaticon";
                     position: absolute;
                     right: 16px;
                     top:50%;
                     transform: translateY(-50%);
-                    color:white;
+                    color: $font-color-4;
                     transition: .3s;
                 }
                 .title{
