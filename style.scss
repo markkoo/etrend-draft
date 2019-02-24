@@ -268,18 +268,7 @@ footer{
         transition: .3s;
         .category{
             border-top:1px solid $color-basic-4;
-            &.active{
-                span{
-                    background: rgba(white, 0.1);
-                    &:after{
-                        transform: rotate(90deg)
-                    }
-                }
-                .link{
-                    display: block;
-                }
-            }
-            span{
+            .header{
                 padding:6px 16px;
                 color:white;
                 position: relative;
@@ -287,16 +276,28 @@ footer{
                 text-transform: uppercase;
                 font-size: 13px;
                 cursor: pointer;
+                &[data-open="true"]{
+                    &:after{ 
+                        transform: rotate(90deg)
+                    }
+                }
+                &.active{
+                    background: rgba(white, 0.1);
+                    &:after{ 
+                        transform: rotate(90deg)
+                    }
+                }
                 &:after{
                     content: "\f100";
                     font-family: Flaticon;
                     float: right;
+                    transition: .3s;
                 }
                 &:hover{
                     background: rgba(white, 0.1);
                 }
             }
-            .link{
+            .content{
                 display: none;
                 overflow: hidden;
                 a{
@@ -430,37 +431,73 @@ footer{
 .brandCollection{
     .category{
         background: $color-secondary-1;
+        &:nth-of-type(1){
+            .header{
+                border-top: none;
+            }
+        }
         .header{
-            height:86px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
+            border-top: 1px solid $color-basic-4;
             border-bottom: 1px solid $color-basic-4;
-            .title{
-                color:white;
-                text-transform: uppercase;
-                margin-bottom: 0;
-                font-weight: 700;
-                letter-spacing: 2px;
-                word-spacing: 4px;
+            &[data-open="true"]{
+                .container{
+                    &:before{
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+            .container{
+                height:86px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:before{
+                    content: "\f103";
+                    font-family: "Flaticon";
+                    position: absolute;
+                    right: 16px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    color:white;
+                    transition: .3s;
+                }
+                .title{
+                    color:white;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    word-spacing: 4px;
+                }
             }
         }
         .content{
-            padding:32px 0;
-            .wrap{
-                padding:8px;
-                display: block;
-                .image{
-                    width:100%;
+            display: none;
+            overflow: hidden;
+            .container{
+                padding:32px 0;
+                .wrap{
+                    padding:8px;
                     display: block;
-                }
-                .companyName{
-                    color:white;
-                    text-align: center;
-                    margin:4px 0 0;
+                    .image{
+                        width:100%;
+                        display: block;
+                    }
+                    .companyName{
+                        color:white;
+                        text-align: center;
+                        margin:4px 0 0;
+                        font-size: 14px;
+                    }
                 }
             }
+        }
+    }
+    @media #{$breakpoint-down-sm}{
+        .row{
+            margin-left:0;
+            margin-right:0;
         }
     }
 }

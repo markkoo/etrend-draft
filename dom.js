@@ -23,24 +23,24 @@ function animation(duration, action) {
     window.requestAnimationFrame(animation);
 }
 
-function slideDown(element) {
+function slideDown(element, noAnimationDuration) {
     element.style.display = 'block';
     const height = element.clientHeight;
     element.animate({
         height: [0, height + 'px'],
     }, {
         fillMode:'forwards',
-        duration: 300,
+        duration: noAnimationDuration ? 0 : 300,
     });
 }
 
-function slideUp(element) {
+function slideUp(element, noAnimationDuration) {
     const height = element.clientHeight;
     const animate = element.animate({
         height: [height + 'px', 0],
     }, {
         fillMode:'none',
-        duration: 300,
+        duration: noAnimationDuration ? 0 : 300,
     });
 
     animate.onfinish = function() {

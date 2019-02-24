@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .wrap{
+            width:300px;
+            padding:4px;
+            border:1px solid red;
+        }
+        .arrow{
+            background:yellow;
+            padding:4px;
+            display: inline-block;
+        }
+        .header{
+            border:1px solid blue;
+        }
+        .header[data-open="true"] .arrow{
+            transform: rotate(90deg);
+        }
+        .content{
+            border:1px solid green;
+            display: none;
+            overflow: hidden;
+        }
+        
+        /* .wrap.active{
+            background: gray;
+        }
+        .wrap.active .header .arrow{
+            transform: rotate(90deg);
+        }
+        .wrap.active .content{
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="wrap active">
+        <div class="header">
+            header
+            <span class="arrow">arrow</span>
+        </div>
+        <div class="content">content</div>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            header
+            <span class="arrow">arrow</span>
+        </div>
+        <div class="content">content</div>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            header
+            <span class="arrow">arrow</span>
+        </div>
+        <div class="content">content</div>
+    </div>
+    <script src="/dom.js"></script>
+    <script>
+        document.querySelectorAll('.wrap .header').forEach(function(elem){
+            elem.addEventListener('click',function($event){
+            console.log($event.target)
+                document.querySelectorAll('.wrap .header').forEach(function(elem){
+                console.log(elem)
+                    if($event.target === elem){
+                        const open = elem.getAttribute('data-open');
+                        elem.setAttribute('data-open', (open === 'true') ? 'false' : 'true');
+                        slideToggle(elem.nextElementSibling);
+                    } else{
+                        elem.setAttribute('data-open', 'false');
+                        slideUp(elem.nextElementSibling);
+                    }
+                });
+            });
+        });
+
+        const activeElem = document.querySelector('.wrap.active .header');
+        activeElem.setAttribute('data-open', 'true');
+        slideDown(activeElem.nextElementSibling, true);
+    </script>
+</body>
+
+</html>
