@@ -255,6 +255,8 @@ footer{
     padding-left:$productNavWidthGtLg;
     padding-bottom: $footerHeight;
     transition: .3s;
+    min-height: calc(100vh - 94px);
+    background: $color-secondary-1;
     .productNav{
         position: fixed;
         z-index:1;
@@ -262,7 +264,6 @@ footer{
         height:calc(100vh - #{$headerHeight} - #{$footerHeight});
         overflow-y: auto;
         left:0;
-        background: $color-secondary-1;
         padding-top:100px;
         transition: .3s;
         .category{
@@ -319,7 +320,6 @@ footer{
         }
     }
     .productGallery{
-        background: $color-secondary-1;
         .image-scale-63by100{
             opacity: 0.5;
             transition: .3s;
@@ -345,6 +345,122 @@ footer{
             height:auto;
             padding-top:16px;
             padding-bottom:16px;
+        }
+    }
+}
+
+.brandBanner{
+    height:500px;
+    background-image: url('/src/images/brands/banner.jpg');
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 16px;
+    .title{
+        color:white;
+        position: relative;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        text-align: center;
+        &:before,
+        &:after{
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:1px;
+            background: white;
+        }
+        &:after{
+            top:auto;
+            bottom:0;
+        }
+    }
+    @media #{$breakpoint-only-sm}{
+        height:400px;
+        .title{
+            font-size: $h2;
+        }
+    }
+    @media #{$breakpoint-only-xs}{
+        height:300px;
+        .title{
+            font-size: 24px;
+        }
+    }
+}
+
+.blockquote{
+    padding:32px 0;
+    text-align: center;
+    .content{
+        max-width: 600px;
+        margin:auto;
+        line-height: 1.2;
+        padding:0 40px;
+        position: relative;
+        &:before,
+        &:after{
+            content: "\f101";
+            font-family: "Flaticon";
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        &:after{
+            content: "\f101";
+            top:auto;
+            left:auto;
+            bottom:0;
+            right:0;
+        }
+    }
+    @media #{$breakpoint-only-xs}{
+        .content{
+            font-size: $h4;
+            padding:0 24px;
+        }
+    }
+}
+
+.brandCollection{
+    .category{
+        background: $color-secondary-1;
+        .header{
+            height:86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid $color-basic-4;
+            .title{
+                color:white;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                font-weight: 700;
+                letter-spacing: 2px;
+                word-spacing: 4px;
+            }
+        }
+        .content{
+            padding:32px 0;
+            .wrap{
+                padding:8px;
+                display: block;
+                .image{
+                    width:100%;
+                    display: block;
+                }
+                .companyName{
+                    color:white;
+                    text-align: center;
+                    margin:4px 0 0;
+                }
+            }
         }
     }
 }

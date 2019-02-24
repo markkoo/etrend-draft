@@ -6,7 +6,11 @@ $("#header").load("/shared/header.html",function(){
         }
     });
 });
-$("#footer").load("/shared/footer.html");
+$("#footer").load("/shared/footer.html",function(){
+    if(window.location.href.includes('products')){
+        document.querySelector('footer').classList.add('fixed');
+    }
+});
 $("#productNav").load("/shared/productNav.html",function(){
     document.querySelectorAll('.productNav .category span').forEach(elem =>{
         const reg = new RegExp(' ', 'g');
@@ -16,7 +20,9 @@ $("#productNav").load("/shared/productNav.html",function(){
         }
     });
     document.querySelectorAll('.productNav .category .link a').forEach(elem =>{
-        const urlCategory = elem.textContent.replace(' ', '-').toLocaleLowerCase();
+        const urlCategory = elem.getAttribute('data-url');
+        console.log(urlCategory)
+        // const urlCategory = elem.textContent.replace(' ', '-').toLocaleLowerCase();
         if(window.location.href.includes(urlCategory)){
             elem.classList.add('active');
         }
@@ -29,9 +35,5 @@ $("#productNav").load("/shared/productNav.html",function(){
     });
 });
 
-if(window.location.href.includes('product')){
-    setTimeout(function(){
-        document.querySelector('footer').classList.add('fixed');
-    },400)
-}
+
 
