@@ -23,19 +23,15 @@
   font-smoothing: antialiased;
 }
 
-.flaticon-menu:before {
+.flaticon-right-arrow:before {
   content: "\f100";
 }
 
-.flaticon-cancel:before {
+.flaticon-right-quote:before {
   content: "\f101";
 }
 
-.flaticon-error:before {
+.flaticon-left-quote:before {
   content: "\f102";
-}
-
-.flaticon-eye-close-up:before {
-  content: "\f103";
 }
 /*# sourceMappingURL=project-basscss.css.map */

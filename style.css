@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto+Condensed:400,400i,700,700i");
 * {
   -webkit-box-sizing: border-box;
@@ -1056,20 +1057,16 @@ router-outlet {
   font-smoothing: antialiased;
 }
 
-.flaticon-menu:before {
+.flaticon-right-arrow:before {
   content: "\f100";
 }
 
-.flaticon-cancel:before {
+.flaticon-right-quote:before {
   content: "\f101";
 }
 
-.flaticon-error:before {
+.flaticon-left-quote:before {
   content: "\f102";
-}
-
-.flaticon-eye-close-up:before {
-  content: "\f103";
 }
 
 @font-face {
@@ -1478,9 +1475,11 @@ footer .powered {
 }
 
 .productContent .productNav .category .header:after {
-  content: "\f100";
+  content: "";
   font-family: Flaticon;
   float: right;
+  font-size: 10px;
+  color: #a6a6a6;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1623,20 +1622,22 @@ footer .powered {
   position: relative;
 }
 
-.blockquote .content:before, .blockquote .content:after {
-  content: "\f101";
+.blockquote .content:before {
+  content: "";
   font-family: "Flaticon";
   position: absolute;
   top: 0;
   left: 0;
+  color: #8CC63E;
 }
 
 .blockquote .content:after {
-  content: "\f101";
-  top: auto;
-  left: auto;
+  content: "";
+  font-family: "Flaticon";
+  position: absolute;
   bottom: 0;
   right: 0;
+  color: #8CC63E;
 }
 
 @media (min-width: 1px) and (max-width: 420px) {
@@ -1679,14 +1680,14 @@ footer .powered {
 }
 
 .brandCollection .category .header .container:before {
-  content: "\f103";
+  content: "";
   font-family: "Flaticon";
   position: absolute;
   right: 16px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: white;
+  color: #a6a6a6;
   -webkit-transition: .3s;
   transition: .3s;
 }
