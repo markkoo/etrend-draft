@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="shortcut icon" type="image/png" href="/src/images/favicon.png"/>
+    <title>Brands - etrend</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="aboutBanner">
+        <p class="h3 subtitle">- Experts in Bathroom Design -</p>
+        <h1 class="title">REPRESENTING LEADING BRANDS IN MALTA</h1>
+    </div>
+    <div class="aboutInfo">
+        <div class="container">
+            <p class="h3 title">Company Profile</p>
+            <div class="line"></div>
+            <div class="content">
+                <p>Our company started in the year 2006 as "E Trend Enterprise" by our Director Mr Ernie Lim Heng Leong.</p>
+                <p>"E" stands for Eco and the word "Trend" refers to our vision to distribute Eco friendly products to the markets.</p>
+                <p>As customer satisfactions is our top priority, we are committed to provide excellent after sales service.</p>
+                <p>As such, we have long-term good working business relationship with many reputable clients and customers nationally.</p>
+                <p>It is also our vision and mission to work hard to provide an environment that wi protect and preserve our precious natural resources.</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/dom.js"></script>
+    <script>
+        document.querySelectorAll('.category .header').forEach(function(elem){
+            elem.addEventListener('click', function($event){
+                document.querySelectorAll('.category .header').forEach(function(elem){
+                    if($event.currentTarget === elem){
+                        const open = elem.getAttribute('data-open');
+                        elem.setAttribute('data-open', (open === 'true') ? 'false' : 'true');
+                        slideToggle(elem.nextElementSibling);
+                    } else{
+                        elem.setAttribute('data-open', 'false');
+                        slideUp(elem.nextElementSibling);
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.category .header').forEach(function(elem, index){
+            if(index === 0){
+                elem.setAttribute('data-open', 'true');
+                slideDown(elem.nextElementSibling);
+            }
+        });
+
+    </script>
+</body>
+</html>
