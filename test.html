@@ -66,6 +66,7 @@
         </div>
         <div class="content">content</div>
     </div>
+    <script src="/src/web-animations.min.js"></script>
     <script src="/dom.js"></script>
     <script>
         document.querySelectorAll('.wrap .header').forEach(function(elem){
@@ -73,7 +74,7 @@
             console.log($event.target)
                 document.querySelectorAll('.wrap .header').forEach(function(elem){
                 console.log(elem)
-                    if($event.target === elem){
+                    if($event.currentTarget === elem){
                         const open = elem.getAttribute('data-open');
                         elem.setAttribute('data-open', (open === 'true') ? 'false' : 'true');
                         slideToggle(elem.nextElementSibling);
@@ -85,9 +86,9 @@
             });
         });
 
-        const activeElem = document.querySelector('.wrap.active .header');
-        activeElem.setAttribute('data-open', 'true');
-        slideDown(activeElem.nextElementSibling, true);
+        // const activeElem = document.querySelector('.wrap.active .header');
+        // activeElem.setAttribute('data-open', 'true');
+        // slideDown(activeElem.nextElementSibling, true);
     </script>
 </body>
 

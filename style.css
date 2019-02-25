@@ -1341,6 +1341,7 @@ footer .powered {
 .homeContent .box .companyContent .guide {
   color: white;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .homeContent .box .brandContent {
@@ -1368,8 +1369,8 @@ footer .powered {
     height: 360vh;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (11.11%)[9];
-        grid-template-rows: repeat(9, 11.11%);
+    -ms-grid-rows: 20% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-rows: 20% 10% 10% 10% 10% 10% 10% 10% 10%;
   }
   .homeContent .box:before {
     background: rgba(0, 0, 0, 0.15);
@@ -1444,6 +1445,7 @@ footer .powered {
   padding-top: 100px;
   -webkit-transition: .3s;
   transition: .3s;
+  overflow: hidden;
 }
 
 .productContent .productNav .category {
@@ -1804,7 +1806,7 @@ footer .powered {
 .aboutInfo .line {
   width: 100px;
   height: 1px;
-  background: white;
+  background: #8CC63E;
   margin: 16px auto;
 }
 
@@ -1913,6 +1915,9 @@ footer .powered {
   width: 100%;
   padding: 6px 10px;
   margin-bottom: 8px;
+  border-radius: 0;
+  border: 1px solid #969696;
+  -webkit-appearance: none;
 }
 
 .aboutContent .rightArea form textarea {
@@ -1920,6 +1925,9 @@ footer .powered {
   width: 100%;
   height: 93px;
   padding: 6px 10px;
+  border-radius: 0;
+  border: 1px solid #969696;
+  -webkit-appearance: none;
 }
 
 .aboutContent .rightArea form .button {
@@ -1928,15 +1936,15 @@ footer .powered {
   float: right;
   border: none;
   padding: 8px 32px;
-  background: #212121;
   color: white;
   -webkit-transition: .3s;
   transition: .3s;
+  background: #8CC63E;
   cursor: pointer;
 }
 
 .aboutContent .rightArea form .button:hover {
-  background: #8CC63E;
+  background: #212121;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
