@@ -552,6 +552,11 @@ footer{
         transition: .3s;
         overflow: hidden;
         background: $color-secondary-1;
+        .allCategory{
+            padding:6px 16px;
+            color:white;
+            cursor: pointer;
+        }
         .category{
             border-top:1px solid $color-basic-4;
             .header{
@@ -563,6 +568,7 @@ footer{
                 font-size: 13px;
                 cursor: pointer;
                 &[data-open="true"]{
+                    background: rgba(white, 0.1);
                     &:after{ 
                         transform: rotate(90deg)
                     }
@@ -593,6 +599,7 @@ footer{
                     display: block;
                     color:$font-color-4;
                     font-size: 12px;
+                    cursor: pointer;
                     &.active,
                     &:hover{
                         background: rgba(white, 0.1);
@@ -618,6 +625,10 @@ footer{
                     width:100%;
                     border:1px solid $color-basic-2;
                     margin-bottom: 8px;
+                    transition: .3s;
+                    &:hover{
+                        border-color:$color-main;
+                    }
                 }
             }
         }
@@ -637,6 +648,11 @@ footer{
             height:auto;
             padding-top:16px;
             padding-bottom:16px;
+        }
+    }
+    @media #{$breakpoint-down-md}{
+        .pdfContent{
+            padding:32px 0;
         }
     }
 }

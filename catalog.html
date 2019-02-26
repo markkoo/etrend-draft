@@ -15,6 +15,9 @@
 	<div id="header"></div>
 	<div class="catalogContent">
 		<div class="catalogNav">
+			<div id="allCategory" class="allCategory">
+				<span class="header">All</span>
+			</div>
 			<div class="category">
 				<span class="header">Smart Building System</span>
 				<div class="content">
@@ -70,36 +73,68 @@
 
 		<div class="pdfContent">
 			<div class="row">
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="vda">
 					<div class="wrap">
-						<a href="/src/pdf/smartBuildingSystem/VDA/VDA.pdf" target="_blank" data-name="vda">
-							<img src="/src//images/catalog/smartBuildingSystem/VDA/cover.JPG" alt="">
+						<a href="/src/category/smartBuildingSystem/VDA/pdf/VDA.pdf" target="_blank">
+							<img src="/src/category/smartBuildingSystem/VDA/pdf/VDA.JPG" alt="">
 						</a>
 						<p class="h4 title">VDA</p>
 					</div>
 				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="daikin-proshop">
 					<div class="wrap">
-						<a href="/src/pdf/VRVHomeCentralSystem/daikinProshop/Daikin-Proshop.pdf" target="_blank" data-name="vda">
-							<img src="/src/images/catalog/VRVHomeCentralSystem/daikinProshop/cover.jpg" alt="">
+						<a href="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/Daikin-Proshop.pdf" target="_blank">
+							<img src="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/daikinProshop.jpg" alt="">
 						</a>
 						<p class="h4 title">Daikin Proshop</p>
 					</div>
 				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="conti">
 					<div class="wrap">
-						<a href="/src/pdf/washroomSolution/conti/CONTI-8-pager-2018.pdf" target="_blank" data-name="vda">
-							<img src="/src//images/catalog/washroomSolution/conti/cover.jpg" alt="">
+						<a href="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.pdf" target="_blank">
+							<img src="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.jpg" alt="">
 						</a>
 						<p class="h4 title">CONTI 8 Pager 2018</p>
 					</div>
 				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="justime">
 					<div class="wrap">
-						<a href="/src/pdf/washroomSolution/justime/Justime-faucets-and-showers-2018.pdf" target="_blank" data-name="vda">
-							<img src="/src//images/catalog/washroomSolution/conti/cover.jpg" alt="">
+						<a href="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.pdf" target="_blank">
+							<img src="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.JPG" alt="">
+						</a>
+						<p class="h4 title">Justime Faucets and Showers 2018</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="vda">
+					<div class="wrap">
+						<a href="/src/category/smartBuildingSystem/VDA/pdf/VDA.pdf" target="_blank">
+							<img src="/src/category/smartBuildingSystem/VDA/pdf/VDA.JPG" alt="">
+						</a>
+						<p class="h4 title">VDA</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="daikin-proshop">
+					<div class="wrap">
+						<a href="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/Daikin-Proshop.pdf" target="_blank">
+							<img src="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/daikinProshop.jpg" alt="">
+						</a>
+						<p class="h4 title">Daikin Proshop</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="conti">
+					<div class="wrap">
+						<a href="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.pdf" target="_blank">
+							<img src="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.jpg" alt="">
 						</a>
 						<p class="h4 title">CONTI 8 Pager 2018</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="justime">
+					<div class="wrap">
+						<a href="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.pdf" target="_blank">
+							<img src="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.JPG" alt="">
+						</a>
+						<p class="h4 title">Justime Faucets and Showers 2018</p>
 					</div>
 				</div>
 			</div>
@@ -124,6 +159,28 @@
 						slideUp(elem.nextElementSibling);
 					}
 				});
+			});
+		});
+		document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem){
+			elem.addEventListener('click',function($event){
+				document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem){
+					elem.classList.remove('active');
+				});
+				elem.classList.add('active');
+
+				const filterName = elem.getAttribute('data-filter');
+				document.querySelectorAll('[data-name]').forEach(elem =>{
+					elem.style.display = 'none';
+					if(elem.getAttribute('data-name') === filterName){
+						elem.style.display = 'block';
+					}
+				});
+
+			});
+		});
+		document.getElementById('allCategory').addEventListener('click',()=>{
+			document.querySelectorAll('[data-name]').forEach(elem =>{
+				elem.style.display = 'block';
 			});
 		});
 	</script>
