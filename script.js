@@ -7,7 +7,7 @@ $("#header").load("/shared/header.html",function(){
     });
 });
 $("#footer").load("/shared/footer.html",function(){
-    if(window.location.href.includes('products') || window.location.href.includes('contact')){
+    if(window.location.href.includes('products') || window.location.href.includes('contact') || window.location.href.includes('catalog')){
         document.querySelector('footer').classList.add('fixed');
     }
 });

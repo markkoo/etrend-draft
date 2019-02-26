@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="robots" content="noindex,nofollow" />
+	<title>etrend</title>
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="stylesheet" href="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+</head>
+
+<body>
+	<div id="header"></div>
+	<div class="catalogContent">
+		<div class="catalogNav">
+			<div class="category">
+				<span class="header">Smart Building System</span>
+				<div class="content">
+					<span data-filter="vda">VDA</span>
+				</div>
+			</div>
+			<div class="category">
+				<span class="header">VRV Home Central System</span>
+				<div class="content">
+					<span data-filter="daikin-proshop">Daikin Proshop</span>
+				</div>
+			</div>
+			<div class="category">
+				<span class="header">Washroom Solution</span>
+				<div class="content">
+					<span data-filter="conti">Conti</span>
+					<span data-filter="justime">Justime</span>
+					<span data-filter="tece">Tece</span>
+					<span data-filter="global">Global</span>
+					<span data-filter="anello">Anello</span>
+					<span data-filter="american-standard">American Standard</span>
+					<span data-filter="econax">Econax</span>
+					<span data-filter="saniton">Saniton</span>
+					<span data-filter="sovereign">Sovereign</span>
+					<span data-filter="evanity">E' vanity</span>
+				</div>
+			</div>
+			<div class="category">
+				<span class="header">Hot Water System</span>
+				<div class="content">
+					<span data-filter="pecol">Pecol</span>
+					<span data-filter="seers">Seers</span>
+					<span data-filter="beebest">Beebest</a>
+				</div>
+			</div>
+			<div class="category">
+				<span class="header">Solid Surface Countertop</span>
+				<div class="content">
+					<span data-filter="dupont-corian">Dupont Corian</span>
+					<span data-filter="arrowfish">Arrowfish</span>
+				</div>
+			</div>
+			<div class="category">
+				<span class="header">Others</span>
+				<div class="content">
+					<span data-filter="tern">Tern - Security Electrical Fencing System</span>
+					<span data-filter="viega">Viega - Piping System</span>
+					<span data-filter="vigro">Vigro - Laminate</span>
+					<span data-filter="gorenje">Gorenje</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="pdfContent">
+			<div class="row">
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+					<div class="wrap">
+						<a href="/src/pdf/smartBuildingSystem/VDA/VDA.pdf" target="_blank" data-name="vda">
+							<img src="/src//images/catalog/smartBuildingSystem/VDA/cover.JPG" alt="">
+						</a>
+						<p class="h4 title">VDA</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+					<div class="wrap">
+						<a href="/src/pdf/VRVHomeCentralSystem/daikinProshop/Daikin-Proshop.pdf" target="_blank" data-name="vda">
+							<img src="/src/images/catalog/VRVHomeCentralSystem/daikinProshop/cover.jpg" alt="">
+						</a>
+						<p class="h4 title">Daikin Proshop</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+					<div class="wrap">
+						<a href="/src/pdf/washroomSolution/conti/CONTI-8-pager-2018.pdf" target="_blank" data-name="vda">
+							<img src="/src//images/catalog/washroomSolution/conti/cover.jpg" alt="">
+						</a>
+						<p class="h4 title">CONTI 8 Pager 2018</p>
+					</div>
+				</div>
+				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2">
+					<div class="wrap">
+						<a href="/src/pdf/washroomSolution/justime/Justime-faucets-and-showers-2018.pdf" target="_blank" data-name="vda">
+							<img src="/src//images/catalog/washroomSolution/conti/cover.jpg" alt="">
+						</a>
+						<p class="h4 title">CONTI 8 Pager 2018</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+
+	<script src="/src/web-animations.min.js"></script>
+	<script src="/dom.js"></script>
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="/script.js"></script>
+	<script>
+		document.querySelectorAll('.catalogContent .category .header').forEach(function(elem){
+			elem.addEventListener('click',function($event){
+				document.querySelectorAll('.catalogContent .category .header').forEach(function(elem){
+					if($event.currentTarget === elem){
+						const open = elem.getAttribute('data-open');
+						elem.setAttribute('data-open', (open === 'true') ? 'false' : 'true');
+						slideToggle(elem.nextElementSibling);
+					} else{
+						elem.setAttribute('data-open', 'false');
+						slideUp(elem.nextElementSibling);
+					}
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
