@@ -23,7 +23,7 @@ header{
         .logoLink{
             align-self: flex-end;
             .image{
-                height: 50px;
+                height: 30px;
                 margin-bottom:12px;
             }
         }
@@ -473,76 +473,34 @@ footer{
 }
 
 .brandCollection{
-    .category{
-        background: $color-secondary-1;
-        &:nth-of-type(1){
-            .header{
-                border-top: none;
-            }
+    border-top:1px solid $color-basic-2;
+    padding:32px 0;
+    .title{
+        text-align: center;
+        color:$font-color-2;
+    }   
+    .brandImages{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        img{    
+            padding:8px;
+            width:100%;
         }
-        .header{
-            border-top: 1px solid $color-basic-4;
-            border-bottom: 1px solid $color-basic-4;
-            &[data-open="true"]{
-                .container{
-                    &:before{
-                        transform: translateY(-50%) rotate(90deg);
-                    }
-                }
-            }
-            .container{
-                height:86px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                &:before{
-                    content: $font-Flaticon-right-arrow;
-                    font-family: "Flaticon";
-                    position: absolute;
-                    right: 16px;
-                    top:50%;
-                    transform: translateY(-50%);
-                    color: $font-color-4;
-                    transition: .3s;
-                }
-                .title{
-                    color:white;
-                    text-transform: uppercase;
-                    margin-bottom: 0;
-                    font-weight: 700;
-                    letter-spacing: 2px;
-                    word-spacing: 4px;
-                }
-            }
-        }
-        .content{
-            display: none;
-            overflow: hidden;
-            .container{
-                padding:32px 0;
-                .wrap{
-                    padding:8px;
-                    display: block;
-                    .image{
-                        width:100%;
-                        display: block;
-                    }
-                    .companyName{
-                        color:white;
-                        text-align: center;
-                        margin:4px 0 0;
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
+    } 
+    @media #{$breakpoint-only-md}{
+        .brandImages{
+            grid-template-columns: repeat(4, 1fr);
+        } 
     }
-    @media #{$breakpoint-down-sm}{
-        .row{
-            margin-left:0;
-            margin-right:0;
-        }
+    @media #{$breakpoint-only-sm}{
+        .brandImages{
+            grid-template-columns: repeat(3, 1fr);
+        } 
+    }
+    @media #{$breakpoint-only-xs}{
+        .brandImages{
+            grid-template-columns: repeat(2, 1fr);
+        } 
     }
 }
 
@@ -673,6 +631,7 @@ footer{
         address{
             font-style: normal;
             font-size: 12px;
+            margin-bottom:64px;
             .address{
                 color:white;
                 margin-bottom: 0;
@@ -691,9 +650,12 @@ footer{
                 // &.email{
                 // }
             }
+            .fax{
+                display: block;
+                color:white;
+            }
         }
         .openingHour{
-            margin-top:64px;
             margin-bottom: 16px;
             color:white;
             font-weight: 700;
@@ -772,8 +734,8 @@ footer{
     @media #{$breakpoint-down-sm}{
         .leftArea{
             padding:24px 8px;
-            .openingHour{
-                margin-top:32px;
+            address{
+                margin-bottom:32px;
             }
         }
         .rightArea{

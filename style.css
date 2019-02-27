@@ -1079,7 +1079,7 @@ router-outlet {
 
 header {
   position: relative;
-  height: 94px;
+  height: 60px;
   z-index: 1;
 }
 
@@ -1088,7 +1088,7 @@ header .areaForFixed {
   top: 0;
   left: 0;
   width: 100%;
-  height: 94px;
+  height: 60px;
   padding: 0 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1102,7 +1102,7 @@ header .areaForFixed .logoLink {
 }
 
 header .areaForFixed .logoLink .image {
-  height: 50px;
+  height: 30px;
   margin-bottom: 12px;
 }
 
@@ -1462,7 +1462,7 @@ footer .powered {
   position: fixed;
   z-index: 1;
   width: 320px;
-  height: calc(100vh - 94px - 40px);
+  height: calc(100vh - 60px - 40px);
   overflow-y: auto;
   left: 0;
   -webkit-transition: .3s;
@@ -1677,90 +1677,46 @@ footer .powered {
   }
 }
 
-.brandCollection .category {
-  background: #212121;
-}
-
-.brandCollection .category:nth-of-type(1) .header {
-  border-top: none;
-}
-
-.brandCollection .category .header {
-  border-top: 1px solid #4c4c4c;
-  border-bottom: 1px solid #4c4c4c;
-}
-
-.brandCollection .category .header[data-open="true"] .container:before {
-  -webkit-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg);
-}
-
-.brandCollection .category .header .container {
-  height: 86px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.brandCollection .category .header .container:before {
-  content: "";
-  font-family: "Flaticon";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #a6a6a6;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.brandCollection .category .header .container .title {
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-weight: 700;
-  letter-spacing: 2px;
-  word-spacing: 4px;
-}
-
-.brandCollection .category .content {
-  display: none;
-  overflow: hidden;
-}
-
-.brandCollection .category .content .container {
+.brandCollection {
+  border-top: 1px solid #e4e4e4;
   padding: 32px 0;
 }
 
-.brandCollection .category .content .container .wrap {
-  padding: 8px;
-  display: block;
-}
-
-.brandCollection .category .content .container .wrap .image {
-  width: 100%;
-  display: block;
-}
-
-.brandCollection .category .content .container .wrap .companyName {
-  color: white;
+.brandCollection .title {
   text-align: center;
-  margin: 4px 0 0;
-  font-size: 14px;
+  color: #383838;
 }
 
-@media (max-width: 768px) {
-  .brandCollection .row {
-    margin-left: 0;
-    margin-right: 0;
+.brandCollection .brandImages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.brandCollection .brandImages img {
+  padding: 8px;
+  width: 100%;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .brandCollection .brandImages {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .brandCollection .brandImages {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1px) and (max-width: 420px) {
+  .brandCollection .brandImages {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1913,6 +1869,7 @@ footer .powered {
 .contact .leftArea address {
   font-style: normal;
   font-size: 12px;
+  margin-bottom: 64px;
 }
 
 .contact .leftArea address .address {
@@ -1933,8 +1890,12 @@ footer .powered {
   margin-bottom: 16px;
 }
 
+.contact .leftArea address .fax {
+  display: block;
+  color: white;
+}
+
 .contact .leftArea .openingHour {
-  margin-top: 64px;
   margin-bottom: 16px;
   color: white;
   font-weight: 700;
@@ -2028,8 +1989,8 @@ footer .powered {
   .contact .leftArea {
     padding: 24px 8px;
   }
-  .contact .leftArea .openingHour {
-    margin-top: 32px;
+  .contact .leftArea address {
+    margin-bottom: 32px;
   }
   .contact .rightArea {
     padding: 24px 8px;
