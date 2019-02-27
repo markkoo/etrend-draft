@@ -1,245 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="robots" content="noindex,nofollow" />
+		<title>E TREND</title>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="stylesheet" href="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="robots" content="noindex,nofollow" />
-	<title>E TREND</title>
-	<link rel="stylesheet" href="/style.css" />
-	<link rel="stylesheet" href="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
-</head>
-
-<body>
-	<div id="header"></div>
-	<div class="catalogContent">
-		<div class="catalogNav">
-			<div id="allCategory" class="allCategory">
-				<span class="header">All</span>
-			</div>
-			<div class="category">
-				<span class="header">Smart Building System</span>
-				<div class="content">
-					<span class="brand" data-filter="vda">VDA</span>
+	<body>
+		<div id="header"></div>
+		<div class="catalogContent">
+			<div class="catalogNav">
+				<div id="allCategory" class="allCategory">
+					<span class="header">All</span>
 				</div>
-			</div>
-			<div class="category">
-				<span class="header">VRV Home Central System</span>
-				<div class="content">
-					<span class="brand" data-filter="daikin-proshop">Daikin Proshop</span>
+				<div class="category">
+					<span class="header">Smart Building System</span>
+					<div class="content">
+						<span class="brand" data-filter="vda">VDA</span>
+					</div>
 				</div>
-			</div>
-			<div class="category">
-				<span class="header">Washroom Solution</span>
-				<div class="content">
-					<span class="brand" data-filter="conti">Conti</span>
-					<span class="brand" data-filter="justime">Justime</span>
-					<span class="brand" data-filter="tece">Tece</span>
-					<span class="brand" data-filter="global">Global</span>
-					<!-- <span class="brand" data-filter="anello">Anello</span> -->
-					<!-- <span class="brand" data-filter="american-standard">American Standard</span> -->
-					<span class="brand" data-filter="econax">Econax</span>
-					<!-- <span class="brand" data-filter="saniton">Saniton</span> -->
-					<!-- <span class="brand" data-filter="sovereign">Sovereign</span> -->
-					<!-- <span class="brand" data-filter="evanity">E' vanity</span> -->
+				<div class="category">
+					<span class="header">VRV Home Central System</span>
+					<div class="content">
+						<span class="brand" data-filter="daikin-proshop">Daikin Proshop</span>
+					</div>
 				</div>
-			</div>
-			<!-- <div class="category">
+				<div class="category">
+					<span class="header">Washroom Solution</span>
+					<div class="content">
+						<span class="brand" data-filter="conti">Conti</span>
+						<span class="brand" data-filter="justime">Justime</span>
+						<span class="brand" data-filter="tece">Tece</span>
+						<span class="brand" data-filter="global">Global</span>
+						<span class="brand" data-filter="anello">Anello</span>
+						<!-- <span class="brand" data-filter="american-standard">American Standard</span> -->
+						<span class="brand" data-filter="econax">Econax</span>
+						<!-- <span class="brand" data-filter="saniton">Saniton</span> -->
+						<!-- <span class="brand" data-filter="sovereign">Sovereign</span> -->
+						<!-- <span class="brand" data-filter="evanity">E' vanity</span> -->
+					</div>
+				</div>
+				<!-- <div class="category">
 				<span class="header">Hot Water System</span>
 				<div class="content">
 					<span class="brand" data-filter="pecol">Pecol</span>
-					<span class="brand" data-filter="seers">Seers</span>
+					<span class="brand" data-filter="seers">Seers</span> 
 					<span class="brand" data-filter="beebest">Beebest</a>
 				</div>
 			</div> -->
-			<div class="category">
-				<span class="header">Solid Surface Countertop</span>
-				<div class="content">
-					<span class="brand" data-filter="dupont-corian">Dupont Corian</span>
-					<!-- <span class="brand" data-filter="arrowfish">Arrowfish</span> -->
+				<div class="category">
+					<span class="header">Solid Surface Countertop</span>
+					<div class="content">
+						<span class="brand" data-filter="dupont-corian">Dupont Corian</span>
+						<span class="brand" data-filter="arrowfish">Arrowfish</span>
+					</div>
+				</div>
+				<div class="category">
+					<span class="header">Others</span>
+					<div class="content">
+						<span class="brand" data-filter="tern">Tern - Security Electrical Fencing System</span>
+						<span class="brand" data-filter="viega">Viega - Piping System</span>
+						<!-- <span class="brand" data-filter="vigro">Vigro - Laminate</span> -->
+						<span class="brand" data-filter="gorenje">Gorenje</span>
+					</div>
 				</div>
 			</div>
-			<div class="category">
-				<span class="header">Others</span>
-				<div class="content">
-					<span class="brand" data-filter="tern">Tern - Security Electrical Fencing System</span>
-					<span class="brand" data-filter="viega">Viega - Piping System</span>
-					<!-- <span class="brand" data-filter="vigro">Vigro - Laminate</span> -->
-					<span class="brand" data-filter="gorenje">Gorenje</span>
+
+			<div class="pdfContent">
+				<div class="row">
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="vda">
+						<div class="wrap">
+							<a href="/src/category/smartBuildingSystem/VDA/pdf/VDA.pdf" target="_blank">
+								<img src="/src/category/smartBuildingSystem/VDA/pdf/VDA.JPG" alt="" />
+							</a>
+							<p class="h4 title">VDA</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="daikin-proshop">
+						<div class="wrap">
+							<a
+								href="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/Daikin-Proshop.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/daikinProshop.jpg"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Daikin Proshop</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="conti">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.jpg" alt="" />
+							</a>
+							<p class="h4 title">CONTI 8 Pager 2018</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/anello/pdf/ANELLO-AVA-SERIES.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/anello/pdf/ANELLO-AVA-SERIES.JPG" alt="" />
+							</a>
+							<p class="h4 title">Ava Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/anello/pdf/Anello-Blue-Series.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-Blue-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">Blue Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/anello/pdf/Anello-Flame-Series.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-Flame-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">Flame Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/anello/pdf/Anello-Ice-Series.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-Ice-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">Ice Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a
+								href="/src/category/washroomSolution/anello/pdf/Anello-Project-Series.pdf"
+								target="_blank"
+							>
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-Project-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">Project Series​</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/anello/pdf/Anello-R-Series.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-R-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">R Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="anello">
+						<div class="wrap">
+							<a
+								href="/src/category/washroomSolution/anello/pdf/Anello-Revalli-Series.pdf"
+								target="_blank"
+							>
+								<img src="/src/category/washroomSolution/anello/pdf/Anello-Revalli-Series.JPG" alt="" />
+							</a>
+							<p class="h4 title">Revalli Series</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="justime">
+						<div class="wrap">
+							<a
+								href="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Justime Faucets and Showers 2018</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tece">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/tece/pdf/TECE-SEA-Brochure.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/tece/pdf/tece-sea-brochure.JPG" alt="" />
+							</a>
+							<p class="h4 title">TECE Sea Brochure</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tece">
+						<div class="wrap">
+							<a
+								href="/src/category/washroomSolution/tece/pdf/TECE-drainline-Catalogue.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/washroomSolution/tece/pdf/tece-drainline-catalogue.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">TECE Drainline Catalogue</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="global">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/global/pdf/Global-product.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/global/pdf/global-product.JPG" alt="" />
+							</a>
+							<p class="h4 title">Global Product</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="econax">
+						<div class="wrap">
+							<a href="/src/category/washroomSolution/econax/pdf/Econax-Catalog-2018.pdf" target="_blank">
+								<img src="/src/category/washroomSolution/econax/pdf/econax-catalog-2018.JPG" alt="" />
+							</a>
+							<p class="h4 title">Econax Catalog 2018</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
+						<div class="wrap">
+							<a
+								href="/src/category/others/gorenje/pdf/Gorenje-Ora-Ito-II-Presentation.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/others/gorenje/pdf/gorenje-ora-Ito-II-presentation.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Gorenje Ora Ito II Presentation</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
+						<div class="wrap">
+							<a href="/src/category/others/gorenje/pdf/Gorenje-by-Starck-web.pdf" target="_blank">
+								<img src="/src/category/others/gorenje/pdf/gorenje-by-starck-web.JPG" alt="" />
+							</a>
+							<p class="h4 title">Gorenje By Starck Web</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
+						<div class="wrap">
+							<a href="/src/category/others/gorenje/pdf/e-gorenje-by-oraito-catalo.pdf" target="_blank">
+								<img src="/src/category/others/gorenje/pdf/e-gorenje-by-oraito-catalo.JPG" alt="" />
+							</a>
+							<p class="h4 title">Ora-ito</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
+						<div class="wrap">
+							<a
+								href="/src/category/others/gorenje/pdf/e-gorenje-by-starck-catalogue.pdf"
+								target="_blank"
+							>
+								<img src="/src/category/others/gorenje/pdf/e-gorenje-by-starck-catalogue.JPG" alt="" />
+							</a>
+							<p class="h4 title">​Starck</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="dupont-corian">
+						<div class="wrap">
+							<a
+								href="/src/category/solidSurfaceCountertop/dupontCorian/pdf/dupont-Corian.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/solidSurfaceCountertop/dupontCorian/pdf/dupont-corian.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Dupont Corian</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="arrowfish">
+						<div class="wrap">
+							<a href="/src/category/solidSurfaceCountertop/arrowfish/pdf/arrowfish.pdf" target="_blank">
+								<img src="/src/category/solidSurfaceCountertop/arrowfish/pdf/arrowfish.JPG" alt="" />
+							</a>
+							<p class="h4 title">Arrowfish</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tern">
+						<div class="wrap">
+							<a href="/src/category/others/tern/pdf/Tern-Brochure-New.pdf" target="_blank">
+								<img src="/src/category/others/tern/pdf/tern-brochure-new.JPG" alt="" />
+							</a>
+							<p class="h4 title">Tern Brochure New</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a
+								href="/src/category/others/viegaPipingSystem/pdf/Pexfix-Pro-703752-Brochure-INT-net-2015.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/others/viegaPipingSystem/pdf/pexfix-pro-703752-brochure-int-net-2015.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Pexfix Pro 2015</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a
+								href="/src/category/others/viegaPipingSystem/pdf/V-PexfitPro-e-catalogue-20181028.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/others/viegaPipingSystem/pdf/v-pexfitPro-e-catalogue-20181028.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">V Pexfix Pro 2018</p>
+						</div>
+					</div>
+
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a
+								href="/src/category/others/viegaPipingSystem/pdf/VIEGA-Visign-Catalogue-SEA-2017.pdf"
+								target="_blank"
+							>
+								<img
+									src="/src/category/others/viegaPipingSystem/pdf/VIEGA-Visign-Catalogue-SEA-2017.JPG"
+									alt=""
+								/>
+							</a>
+							<p class="h4 title">Product Catalogue 2017​​</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a href="/src/category/others/viegaPipingSystem/pdf/Viega_Presstools.pdf" target="_blank">
+								<img src="/src/category/others/viegaPipingSystem/pdf/Viega-Presstools.JPG" alt="" />
+							</a>
+							<p class="h4 title">Pressgun​​</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a href="/src/category/others/viegaPipingSystem/pdf/megapress.pdf" target="_blank">
+								<img src="/src/category/others/viegaPipingSystem/pdf/megapress.JPG" alt="" />
+							</a>
+							<p class="h4 title">Megapress</p>
+						</div>
+					</div>
+					<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
+						<div class="wrap">
+							<a href="/src/category/others/viegaPipingSystem/pdf/AdvantixVario.pdf" target="_blank">
+								<img src="/src/category/others/viegaPipingSystem/pdf/AdvantixVario.JPG" alt="" />
+							</a>
+							<p class="h4 title">Advantix Vario</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div id="footer"></div>
 
-		<div class="pdfContent">
-			<div class="row">
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="vda">
-					<div class="wrap">
-						<a href="/src/category/smartBuildingSystem/VDA/pdf/VDA.pdf" target="_blank">
-							<img src="/src/category/smartBuildingSystem/VDA/pdf/VDA.JPG" alt="">
-						</a>
-						<p class="h4 title">VDA</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="daikin-proshop">
-					<div class="wrap">
-						<a href="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/Daikin-Proshop.pdf" target="_blank">
-							<img src="/src/category/VRVHomeCentralSystem/daikinProshop/pdf/daikinProshop.jpg" alt="">
-						</a>
-						<p class="h4 title">Daikin Proshop</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="conti">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/conti/pdf/CONTI-8-pager-2018.jpg" alt="">
-						</a>
-						<p class="h4 title">CONTI 8 Pager 2018</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="justime">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/justime/pdf/Justime-faucets-and-showers-2018.JPG" alt="">
-						</a>
-						<p class="h4 title">Justime Faucets and Showers 2018</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tece">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/tece/pdf/TECE-SEA-Brochure.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/tece/pdf/tece-sea-brochure.JPG" alt="">
-						</a>
-						<p class="h4 title">TECE Sea Brochure</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tece">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/tece/pdf/TECE-drainline-Catalogue.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/tece/pdf/tece-drainline-catalogue.JPG" alt="">
-						</a>
-						<p class="h4 title">TECE Drainline Catalogue</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="global">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/global/pdf/Global-product.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/global/pdf/global-product.JPG" alt="">
-						</a>
-						<p class="h4 title">Global Product</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="econax">
-					<div class="wrap">
-						<a href="/src/category/washroomSolution/econax/pdf/Econax-Catalog-2018.pdf" target="_blank">
-							<img src="/src/category/washroomSolution/econax/pdf/econax-catalog-2018.JPG" alt="">
-						</a>
-						<p class="h4 title">Econax Catalog 2018</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
-					<div class="wrap">
-						<a href="/src/category/others/gorenje/pdf/Gorenje-Ora-Ito-II-Presentation.pdf" target="_blank">
-							<img src="/src/category/others/gorenje/pdf/gorenje-ora-Ito-II-presentation.JPG" alt="">
-						</a>
-						<p class="h4 title">Gorenje Ora Ito II Presentation</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="gorenje">
-					<div class="wrap">
-						<a href="/src/category/others/gorenje/pdf/Gorenje-by-Starck-web.pdf" target="_blank">
-							<img src="/src/category/others/gorenje/pdf/gorenje-by-starck-web.JPG" alt="">
-						</a>
-						<p class="h4 title">Gorenje By Starck Web</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="dupont-corian">
-					<div class="wrap">
-						<a href="/src/category/solidSurfaceCountertop/dupontCorian/pdf/dupont-Corian.pdf" target="_blank">
-							<img src="/src/category/solidSurfaceCountertop/dupontCorian/pdf/dupont-corian.JPG" alt="">
-						</a>
-						<p class="h4 title">Dupont Corian</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="tern">
-					<div class="wrap">
-						<a href="/src/category/others/tern/pdf/Tern-Brochure-New.pdf" target="_blank">
-							<img src="/src/category/others/tern/pdf/tern-brochure-new.JPG" alt="">
-						</a>
-						<p class="h4 title">Tern Brochure New</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
-					<div class="wrap">
-						<a href="/src/category/others/viegaPipingSystem/pdf/Pexfix-Pro-703752-Brochure-INT-net-2015.pdf" target="_blank">
-							<img src="/src/category/others/viegaPipingSystem/pdf/pexfix-pro-703752-brochure-int-net-2015.JPG" alt="">
-						</a>
-						<p class="h4 title">Pexfix Pro 2015</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
-					<div class="wrap">
-						<a href="/src/category/others/viegaPipingSystem/pdf/V-PexfitPro-e-catalogue-20181028.pdf" target="_blank">
-							<img src="/src/category/others/viegaPipingSystem/pdf/v-pexfitPro-e-catalogue-20181028.JPG" alt="">
-						</a>
-						<p class="h4 title">V Pexfix Pro 2018</p>
-					</div>
-				</div>
-				<div class="lg-col-3 md-col-4 sm-col-6 col-12 p2" data-name="viega">
-					<div class="wrap">
-						<a href="/src/category/others/viegaPipingSystem/pdf/Viega.pdf" target="_blank">
-							<img src="/src/category/others/viegaPipingSystem/pdf/viega.JPG" alt="">
-						</a>
-						<p class="h4 title">Viega</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer"></div>
-
-	<script src="/src/web-animations.min.js"></script>
-	<script src="/dom.js"></script>
-	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="/script.js"></script>
-	<script>
-		document.querySelectorAll('.catalogContent .category .header').forEach(function(elem){
-			elem.addEventListener('click',function($event){
-				document.querySelectorAll('.catalogContent .category .header').forEach(function(elem){
-					if($event.currentTarget === elem){
-						const open = elem.getAttribute('data-open');
-						elem.setAttribute('data-open', (open === 'true') ? 'false' : 'true');
-						slideToggle(elem.nextElementSibling);
-					} else{
-						elem.setAttribute('data-open', 'false');
-						slideUp(elem.nextElementSibling);
-					}
+		<script src="/src/web-animations.min.js"></script>
+		<script src="/dom.js"></script>
+		<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/script.js"></script>
+		<script>
+			document.querySelectorAll('.catalogContent .category .header').forEach(function(elem) {
+				elem.addEventListener('click', function($event) {
+					document.querySelectorAll('.catalogContent .category .header').forEach(function(elem) {
+						if ($event.currentTarget === elem) {
+							const open = elem.getAttribute('data-open');
+							elem.setAttribute('data-open', open === 'true' ? 'false' : 'true');
+							slideToggle(elem.nextElementSibling);
+						} else {
+							elem.setAttribute('data-open', 'false');
+							slideUp(elem.nextElementSibling);
+						}
+					});
 				});
 			});
-		});
-		document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem){
-			elem.addEventListener('click',function($event){
-				document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem){
-					elem.classList.remove('active');
+			document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem) {
+				elem.addEventListener('click', function($event) {
+					document.querySelectorAll('.catalogContent .category .content span').forEach(function(elem) {
+						elem.classList.remove('active');
+					});
+					elem.classList.add('active');
+
+					const filterName = elem.getAttribute('data-filter');
+					document.querySelectorAll('[data-name]').forEach(elem => {
+						elem.style.display = 'none';
+						if (elem.getAttribute('data-name') === filterName) {
+							elem.style.display = 'block';
+						}
+					});
 				});
-				elem.classList.add('active');
-
-				const filterName = elem.getAttribute('data-filter');
-				document.querySelectorAll('[data-name]').forEach(elem =>{
-					elem.style.display = 'none';
-					if(elem.getAttribute('data-name') === filterName){
-						elem.style.display = 'block';
-					}
+			});
+			document.getElementById('allCategory').addEventListener('click', () => {
+				document.querySelectorAll('[data-name]').forEach(elem => {
+					elem.style.display = 'block';
 				});
-
 			});
-		});
-		document.getElementById('allCategory').addEventListener('click',()=>{
-			document.querySelectorAll('[data-name]').forEach(elem =>{
-				elem.style.display = 'block';
-			});
-		});
-	</script>
-</body>
-
+		</script>
+	</body>
 </html>
