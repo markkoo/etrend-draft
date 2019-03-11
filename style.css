@@ -1558,6 +1558,13 @@ footer .powered {
   padding-top: 100px;
 }
 
+.productContent .productGallery .owl-carousel img {
+  width: 100%;
+  height: calc(100vh - 60px - 40px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .productContent .productGallery .image-scale-63by100 {
   opacity: 0.5;
   -webkit-transition: .3s;

@@ -373,6 +373,13 @@ footer{
         }
     }
     .productGallery{
+        .owl-carousel{
+            img{
+                width: 100%;
+                height:calc(100vh - #{$headerHeight} - #{$footerHeight});
+                object-fit: cover;
+            }
+        }
         .image-scale-63by100{
             opacity: 0.5;
             transition: .3s;
